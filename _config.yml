@@ -9,8 +9,8 @@ description: >- # this means to ignore newlines until "baseurl:"
 # '': for root level domains (mycustomdomain.com)
 # '/projectname': for subdomains (user.github.io/projectname)
 
-#baseurl: '/clouds'
-baseurl: ''
+baseurl: '/clouds'
+#baseurl: ''
 permalink: :title.html
 
 
