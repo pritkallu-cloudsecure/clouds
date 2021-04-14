@@ -1,0 +1,28 @@
+/**
+ * -------------------------------------------------------------
+ * Site settings
+ * ------------------------------------------------------------- */
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	clear: both;
+	font-family: var(--font-body);
+	@include font-size(16);
+	font-weight: normal;
+	line-height: 1.5;
+	color: var(--col-text);
+    
+    overflow-x: hidden;
+}
+
+body > * {
+	position: relative;
+	width: 90%;
+	max-width: 75em; /* 1200px */
+	margin: 0 auto;
+}
+
+

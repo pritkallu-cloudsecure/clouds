@@ -1,0 +1,28 @@
+/**
+ * -------------------------------------------------------- 
+ * Custom properties
+ * -------------------------------------------------------- */
+
+:root {
+
+    --base: 45px;
+    --between: calc(var(--base) * 2);
+
+	--font-body: 'Mukta', Helvetica, Arial, sans-serif;
+
+    --col-text: #212c55;			// dark blue / col-brand-dark
+	--col-text-light: #e3e6f3;	// very light blue
+	--col-text-reverse: #fff;
+    
+	--col-page: #fff;
+    --col-page-light: #F8F8FC;  // off white, with a blue tinge
+    --col-border: #d7d6d6;
+
+	--col-brand: #2faee5; 		// light blue
+    --col-brand-dark: #212c55;	// dark blue
+    --col-brand-light: #e3e6f3;	// very light blue
+    
+    --col-alert: #c73245;  // red
+}
+
+

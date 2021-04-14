@@ -1,0 +1,37 @@
+/**
+ * ------------------------------------------------------------- 
+ * Toggle
+ * 
+ * This is a JavaScript driven plugin. 
+ * More styles are listed in _vendors/_accordion.scss
+ * These are the custom variations for style.
+ * ------------------------------------------------------------- */
+
+
+.column__toggle {
+    padding: var(--base) 0;
+}
+
+.accordion__heading { 
+    padding: 0.5em 0;
+    border-top: 1px solid var(--col-border); 
+}
+
+.accordion__trigger {
+    font-family: var(--font-body);
+	color: var(--col-text);
+}
+
+.accordion__trigger:after { border-top: .5em solid var(--col-border); }
+.accordion__trigger[aria-expanded="true"] { color: var(--col-brand); }
+
+.accordion__trigger:hover:after,
+.accordion__trigger:focus:after,
+.accordion__trigger[aria-expanded="true"]:after { border-top-color: var(--col-brand); }
+
+.accordion__trigger[aria-disabled="true"]:hover { color: var(--col-brand); }
+.accordion__trigger[aria-disabled="true"]:focus { color: var(--col-brand); }
+
+
+
+

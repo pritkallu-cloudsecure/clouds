@@ -1,0 +1,35 @@
+
+/* Typography classes
+ * ------------------------------------------------------------- */
+
+h4,
+time,
+.capitals,
+.text__title {
+	@include font-size(16);
+	font-weight: 800;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+    padding-bottom: var(--base);
+}
+
+time,
+.text__title { color: var(--col-brand); }
+
+
+.post__title {
+    @include font-size(24);
+    font-weight: 800;
+    padding-bottom: var(--base);
+    color: inherit;
+}
+
+.text__standout p {
+    @include font-size(24);
+    font-weight: 800;
+    max-width: 38ch;
+    padding-bottom: var(--base);
+}
+
+
+

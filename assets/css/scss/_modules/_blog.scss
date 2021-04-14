@@ -1,0 +1,36 @@
+/**
+ * ------------------------------------------------------------- 
+ * Blog
+ * ------------------------------------------------------------- */
+
+@media screen and ( max-width: 44.99em ) {
+
+    .blog__excerpt + * { margin-top: var(--base); }
+}
+
+.post__share { padding: var(--base) 0; }
+
+.post__share,
+.post__share ul {
+    display: flex;
+    align-items: center;
+}
+
+.post__share h4 {
+    padding-bottom: 0;
+    margin-right: var(--base);
+}
+
+.post__share ul { 
+    @include no-bullets(); 
+    margin-bottom: 0;
+}
+
+.post__share li { margin-right: 0.7em; }
+
+.post__share .svg__icon {
+    background-color: var(--col-brand-dark);
+    fill: var(--col-text-reverse);    
+}
+
+.post__share a:hover .svg__icon { background-color: var(--col-brand); }

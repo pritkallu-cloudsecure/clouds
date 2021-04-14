@@ -1,0 +1,36 @@
+<aside class="library__nav">
+	<h1>Clouds <br>Pattern Library</h1>
+    <p>A list of all the available modules for the <a href="index.html">Cloud Secure website</a>.</p>
+
+	<nav>
+        <h2><a href="blocks.html">Blocks</a></h2>
+        <ul>
+			{% for block in site.blocks %}
+				<li><a href="blocks.html#{{ block.title | slugify }}">{{ block.title }}</a></li>
+			{% endfor %}
+		</ul>
+	</nav>
+        
+	<nav>
+        <h2><a href="elements.html">Elements</a></h2>
+        <ul>
+			{% for element in site.elements %}
+				<li><a href="elements.html#{{ element.title | slugify }}">{{ element.title }}</a></li>
+			{% endfor %}
+		</ul>
+	</nav>
+
+	<nav>
+        <h2><a href="typography.html">Typography</a></h2>
+        <ul>
+			{% for type in site.typography %}
+				<li><a href="typography.html#{{ type.title | slugify }}">{{ type.title }}</a></li>
+			{% endfor %}
+		</ul>
+	</nav>
+
+    <footer>
+		<p>Copyright &copy; 2021 Joke De Winter.</p>
+		<p class="jokedewinter"><a href="https://www.jokedewinter.co.uk" rel="external"><span class="screen-reader-text">Web design by Joke De Winter</span></a></p>
+	</footer>
+</aside>

@@ -1,0 +1,52 @@
+title: Clouds Pattern Library
+email: joke@jokedewinter.co.uk
+
+description: >- # this means to ignore newlines until "baseurl:"
+  A list of all the available module blocks for the Cloud Secure website.
+
+# baseurl should be set to:
+# '': for local development (localhost:4000)
+# '': for root level domains (mycustomdomain.com)
+# '/projectname': for subdomains (user.github.io/projectname)
+
+#baseurl: '/clouds'
+baseurl: ''
+permalink: :title.html
+
+
+collections:
+  blocks:
+    output: true
+    title: Blocks
+    permalink: /blocks/:path/
+          
+  elements:
+    output: true
+    title: Elements
+    permalink: /elements/:path/
+
+  typography:
+    output: true
+    title: Typography
+    permalink: /typography/:path/
+
+markdown: kramdown
+markdown-blocks: false
+markdown-elements: false
+markdown-typography: false
+
+
+
+exclude:
+ - config.codekit3
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+

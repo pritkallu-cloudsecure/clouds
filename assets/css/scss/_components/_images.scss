@@ -1,0 +1,41 @@
+
+/* Images & media elements
+ * ------------------------------------------------------------- */
+
+img {
+	//width: auto;
+	max-width: 100%;
+	height: auto; 
+	
+	/* Removing the annoying ghost margin you get below an image */
+	display: block;
+	
+	/* Instead use a proper margin below the image */
+	.site__main & { margin-bottom: 1em; }
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+
+.column__image { align-self: center; }
+
+
+/* SVG
+ * ------------------------------------------------------------- */
+
+.svg__icon {
+	width: 32px;
+	height: 32px;
+	display: inline-block;
+	vertical-align: bottom;
+
+    fill: var(--col-text);
+}
+
+
+

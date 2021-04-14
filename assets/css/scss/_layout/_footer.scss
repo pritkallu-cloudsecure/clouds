@@ -1,0 +1,22 @@
+
+/* Site footer
+ * ------------------------------------------------------------- */
+
+.site__footer {
+    padding: var(--between) 0;
+}
+
+
+.site__footer p {
+    @include font-size(16);
+    padding-bottom: 0;
+}
+
+
+/* Colophon author
+ * ------------------------------------------------------------- */
+
+.jokedewinter a { width: 75px; height: 30px; display: block; background: url('../images/jokedewinter.svg'); border-bottom: none; }
+.jokedewinter a:hover { border-bottom: none; }
+
+@include viewport(medium) { .jokedewinter { display: inline-block; float: right; } }

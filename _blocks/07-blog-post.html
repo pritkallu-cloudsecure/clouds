@@ -1,0 +1,44 @@
+---
+layout: item
+title: Blog post
+slug: blog-post
+description: 
+    <p>A block containing a single column of content, aligned to the left.</p>
+    <p>The main classes for this block are <span>block block--blog</span>.</p>
+    <p>For the Share This section you will need to replace <span>[__PAGE_TITLE__]</span>,  <span>[__PAGE_URL__]</span> and  <span>[__PAGE_EXCERPT__]</span> with the appropriate content.</p>
+show_code: true
+---
+
+<div class="block block--blog">
+    <article class="blog__post">
+        <time>Month 99, YEAR</time>
+        <h1 class="post__title">Blog post title</h1>
+        <p>Proin convallis vel nibh id pulvinar. Aliquam et sodales diam, non pellentesque turpis. Suspendisse potenti. Suspendisse est nibh, congue sed porta eget, pulvinar ut tortor. Ut pulvinar purus eget justo eleifend, sed tincidunt ipsum ultricies.</p>
+        <p>Etiam dictum, dui ut viverra ullamcorper, ipsum dolor ultrices libero, vitae venenatis dolor risus id metus...</p>
+        <footer class="post__share">
+            <h4>Share this</h4>
+            <ul>
+            	<li>
+            		<a href="https://twitter.com/intent/tweet?url=[__PAGE_URL__]&amp;text=[__PAGE_TITLE__]" rel="external">
+            		   	<span class="screen-reader-text">Twitter</span>
+            			<svg class="svg__icon"><use xlink:href="#twitter" /></svg>
+            		</a>
+            	</li>
+                <li>
+                    <a href="https://www.linkedin.com/shareArticle?url=[__PAGE_URL__]&title=[__PAGE_TITLE__]">
+            		   	<span class="screen-reader-text">LinkedIn</span>
+            			<svg class="svg__icon"><use xlink:href="#linkedin" /></svg>
+            		</a>
+            	</li>
+            	<li>
+            		<a href="mailto:?subject=[__PAGE_TITLE__]&amp;body=[__PAGE_URL__][__PAGE_EXCERPT__]">
+            		   	<span class="screen-reader-text">Email</span>
+            			<svg class="svg__icon"><use xlink:href="#email" /></svg>
+            		</a>
+            	</li>    
+            </ul>
+        </footer><!-- .post__share -->    
+        
+    </article>
+    
+</div><!-- .block--blog -->

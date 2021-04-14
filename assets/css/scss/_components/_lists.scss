@@ -1,0 +1,52 @@
+
+/* Lists
+ * ------------------------------------------------------------- */
+
+ul, ol {
+	margin: 0;
+	padding-left: 1.5em;
+	@include font-size(18);
+}
+
+li { margin-bottom: 0.5em; }
+li p { padding-bottom: 0; }
+
+
+
+/* List with checks for bullets
+ * ------------------------------------------------------------- */
+
+.list-with-checks { padding-left: 0.3em; }
+
+
+.list-with-checks li {
+	list-style: none;
+	position: relative;
+	padding: 0 0 0 1.5em;
+}
+
+
+.list-with-checks li::before {
+    content: ""; 
+    position: absolute; 
+    left: 1px;
+    top: 2px;
+    width: 6px;
+    height: 12px;
+    border: solid var(--col-text);
+    border-width: 0 4px 4px 0;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* Highlight first line of list differently */
+
+.list-with-checks li > p { font-weight: 700; }
+
+.list-with-checks li p:nth-child(n+2) {
+    color: var(--col-brand);
+    font-weight: 400;
+}
+

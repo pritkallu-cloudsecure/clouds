@@ -1,0 +1,87 @@
+/**
+ * ------------------------------------------------------------- 
+ * Hero
+ * ------------------------------------------------------------- */
+
+.block--hero {
+    display: grid;
+    grid-template-rows: 1fr;
+    position: relative;
+    color: var(--col-text-reverse);
+}
+
+@media screen and ( max-width: 34.99em ) {
+    .block--hero {
+        padding-top: var(--base);
+        padding-bottom: var(--base);
+    }
+}
+
+
+.block--hero > * {
+    grid-row: 1/1;
+    grid-column: 1/1;
+    position: relative;
+    z-index: 100;
+}
+
+.block--hero h1 {
+    @include font-size(24);
+    width: 100%;
+    margin: 0 auto;
+    z-index: 100;
+    text-align: center;
+}
+
+.block--hero figure {
+    z-index: 50;
+    padding-top: var(--between);
+    width: 100vw;
+    margin: 0 -50vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    
+}
+
+.block--hero figure > * {
+    margin: 0 auto;
+}
+.block--hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    width: 105vw;
+    height: 100%;
+    margin: 0 -50vw;
+    display: block;
+    z-index: 10;
+    background-color: rgb(47,174,229);
+    background: linear-gradient(180deg, rgba(47,174,229,1) 0%, rgba(33,44,85,1) 100%);
+}
+
+
+
+@media screen and ( min-width: 45em ) {
+
+    .block--hero h1 { @include font-size(36); }
+    .block--hero figure { padding-top: var(--base); }
+}
+
+@media screen and ( min-width: 55em ) {
+
+    .block--hero h1 {
+        @include font-size(48);
+        padding-top: var(--base);
+    }
+}
+
+@media screen and ( min-width: 70em ) {
+
+    .block--hero h1 {
+        width: 80%;
+        padding-top: var(--between);
+    }
+}

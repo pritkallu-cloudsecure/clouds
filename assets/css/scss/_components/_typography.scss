@@ -1,0 +1,63 @@
+/**
+ * ------------------------------------------------------------- 
+ * Typography
+ * ------------------------------------------------------------- */
+
+* {
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	hyphens: none;
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5,
+h6,
+p, 
+ul,
+ol { 
+    max-width: 50ch;
+    padding-bottom: 1em; 
+}
+
+/* Headings
+ * ------------------------------------------------------------- */
+
+h1, h2, h3 {
+	clear: both;
+	-moz-hyphens: none !important;
+}
+
+h1, h2, h3 {
+	font-weight: 800;
+	line-height: 1.2;
+}
+
+h1 { @include font-size(24); }
+h2 { @include font-size(21); }
+h3 { @include font-size(18); font-weight: 700; }
+
+
+/* Text
+ * ------------------------------------------------------------- */
+
+p {
+	@include font-size(18);
+	
+/*	+ h1, + h2, + h4 { margin-top: 2em; }*/
+}
+
+b, strong { font-weight: 700; }
+em, i { font-style: italic; }
+
+/* Other tags
+ * ------------------------------------------------------------- */
+
+hr {
+	background-color: var(--col-border);
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}

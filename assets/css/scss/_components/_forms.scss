@@ -1,0 +1,300 @@
+
+/* General
+ * ------------------------------------------------------------- */
+
+button,
+input,
+select,
+textarea {
+	clear: both;
+	font-family: var(--font-body)();
+	@include font-size(18);
+	font-weight: 400;
+
+	/* The following bits keep buttons from looking washed out and ugly on iOS devices */
+	outline: 0;
+	-webkit-appearance: none;
+	border-radius: 0px;
+}
+
+/* Fieldset
+ * ------------------------------------------------------------- */
+
+.product__form fieldset {
+	margin: 1em 0;
+	padding-top: 1em;
+	border-top: 1px solid var(--col-border);
+}
+
+.reviews__form fieldset:last-of-type { margin: 1em 0; }
+
+fieldset {
+	margin: 0 0 1em 0;
+	
+	> div {
+		display: inline-block;
+		margin-right: 1em;
+	}
+}
+
+@include viewport(medium) {
+	.reviews__form fieldset {
+		margin: 1em 0;
+		padding-top: 1em;
+	}
+}
+
+/* Label
+ * ------------------------------------------------------------- */
+label {
+	display: block;
+	margin: 0.5em 0;
+	@include font-size(14);
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.product__form label,
+.reviews__form fieldset > label {
+	float: left;
+	vertical-align: middle;
+	display: inline-block;
+	min-width: 5em;
+	margin-right: 1em;
+}
+
+.reviews__form fieldset > label { width: 10em; }
+
+@include viewport(small) {
+	.reviews__form fieldset > label {
+		display: block;
+		float: none;
+	}
+}
+
+/* Input fields & Textarea
+ * ------------------------------------------------------------- */
+input,
+textarea {
+	padding: 0.3em 1em;
+	border: 1px solid var(--col-border);
+	color: var(--col-text);
+	@include transition (all, 0.7s, ease-in-out);
+
+	&:focus,
+	&:active {
+		background: var(--col-border);
+		outline: 0;
+	}
+}
+
+@include viewport(small) {
+	.reviews__form input:not([type="submit"]),
+	.reviews__form textarea { width: 100%; }
+}
+
+@include viewport(medium) {
+	.reviews__form input:not([type="submit"]),
+	.reviews__form textarea { width: calc(100% - 11em); }
+}
+
+/* Radio buttons and Checkboxes
+ * ------------------------------------------------------------- */
+
+.css3--radio,
+.css3--checkbox { 
+	@include no-bullets(); 
+	display: inline-block;
+	li {
+		display: inline-block;
+		margin-right: 1em;
+	}
+}
+
+:root .css3--radio,
+:root .css3--checkbox {	 
+	label {
+	    display: inline-block;
+	    vertical-align: middle;
+	}
+
+	label * { cursor: pointer; }
+	 
+	label:hover span,
+	label:hover span { color: var(--col-brand); }
+	
+	input { border: none; }
+}
+
+:root {	
+	.css3--radio input[type="radio"] + span,
+	.css3--radio input[type="radio"] + span::before,
+	.css3--checkbox input[type="checkbox"] + span,
+	.css3--checkbox input[type="checkbox"] + span::before {
+	    display: inline-block;
+	    vertical-align: middle;
+	}
+	 	 
+	.css3--radio input[type="radio"],
+	.css3--checkbox input[type="checkbox"] {
+	    opacity: 0;
+	    position: absolute;
+	}
+	 
+	.css3--radio input[type="radio"] + span,
+	.css3--checkbox input[type="checkbox"] + span {
+		@include font-size(16);
+		font-weight: 400;
+		text-transform: none;
+		letter-spacing: 0;
+	}
+	 
+	.css3--radio input[type="radio"] + span::before,
+	.css3--checkbox input[type="checkbox"] + span::before {
+	    content: "";
+	    margin: 0 8px 0 0;
+	    border: 2px solid var(--col-border);
+	    line-height: 0.5;
+	    text-align: center;
+	}
+	
+	.css3--radio input[type="radio"]:checked + span::before,
+	.css3--checkbox input[type="checkbox"]:checked + span::before { color: var(--col-text); }
+	 
+	.css3--radio input[type="radio"]:disabled + span,
+	.css3--checkbox input[type="checkbox"]:disabled + span {
+	    cursor: default;
+	    opacity: .4;
+	}
+	
+}
+
+:root .css3--radio {
+	input[type="radio"] + span::before {
+	   	width: 14px;
+	    height: 14px;
+		@include border-radius(100%); 	
+	}
+	
+	input[type="radio"]:checked + span::before {
+	    content: "\2022";
+	    font-size: 32px;
+	}
+}
+	 
+:root .css3--checkbox {
+	input[type="checkbox"] + span::before {
+	   	width: 28px;
+	    height: 28px;
+	}
+
+	input[type="checkbox"]:checked + span::before 	{
+		content: '';
+		background-image: url('../images/svg/check.svg');
+		background-color: var(--col-brand);
+		border-color: var(--col-brand);
+	}
+}
+
+/* Select box
+ * ------------------------------------------------------------- */
+
+:root .css3--select {
+
+    position: relative;
+	display: inline-block;
+	border: 0;
+
+	option,
+	&:after,
+	&::after,
+	select { color: var(--col-text); }
+	 
+	select,
+	&:after,
+	&::after {
+	    display: block;
+	}
+	 
+	select,
+	option { padding: 8px; }
+	 
+	&::after {
+	    content: "\25bc";
+	    position: absolute;
+	    top: 0;
+	    right: 0;
+	    display: block;
+	    width: 32px;
+	    font-size: 12px;
+	    line-height: 40px;
+	    text-align: center;
+	     
+	    -webkit-pointer-events: none;
+	    -moz-pointer-events: none;
+	    pointer-events: none;
+	}
+	
+	
+	select {
+		height:40px; 
+		border: 1px solid var(--col-border);
+		vertical-align: middle;
+		@include font-size(14);
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		outline: 0 none;
+		min-width: 20em;
+	}
+	 
+	option {
+	    background: var(--col-page);;
+	    color: var(--col-text);
+	}
+}
+
+/* Input submit buttons
+ * ------------------------------------------------------------- */
+
+input[type="submit"] { border: none; }
+
+input.button--cart {
+	background-image: url('../images/svg/cart-reverse.svg'); 
+    background-repeat: no-repeat; 
+    background-position: 0.5em;
+    padding-left: 2.75em;     
+}
+
+@include viewport(medium) { .reviews__form input[type="submit"] { margin-left: 9.7em; } }
+
+/* Placeholder text color -- selectors need to be separate to work
+ * ------------------------------------------------------------- */
+::-webkit-input-placeholder { color: var(--col-text)-light; }
+:-moz-placeholder { color: var(--col-text)-light; }
+
+::-moz-placeholder {
+	color: var(--col-text)-light;
+	opacity: 1; /* Since FF19 lowers the opacity of the placeholder by default */
+}
+
+:-ms-input-placeholder { color: var(--col-text)-light; }
+
+input:focus { 
+	&::-webkit-input-placeholder { opacity: 0.2; /* Chrome/Opera/Safari */ }
+	&::-moz-placeholder { opacity: 0.2; /* Firefox 19+ */ }
+	&:-ms-input-placeholder { opacity: 0.2; /* IE 10+ */ }
+	&:-moz-placeholder { opacity: 0.2; /* Firefox 18- */ }
+}
+
+
+/* Form validation
+ * ------------------------------------------------------------- */
+
+.form__error {
+	@include font-size(14); 
+	margin: 0.5em 0 0 0;
+	color: var(--col-alert); 
+	
+//	display: none;
+}

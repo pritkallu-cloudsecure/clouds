@@ -1,0 +1,47 @@
+
+/* Links
+ * ------------------------------------------------------------- */
+
+a {
+	position: relative;
+	text-decoration: none;
+	color: var(--col-text);
+	cursor: pointer;
+
+	&:hover {
+		color: var(--col-brand);
+	}
+}
+
+
+a,
+a span { @include transition (all, 0.7s, ease-in-out); }
+
+
+
+
+.button {
+	display: inline-block;
+	margin: 0 1em;
+
+	@include font-size(16);
+    font-weight: 800;
+    text-transform: uppercase;
+	letter-spacing: 2px;
+	text-align: center;
+	padding: 0.5em 2em;
+	background-color: var(--col-brand-dark);
+	border-bottom: none;
+	color: var(--col-text-reverse);
+    border-radius: 3px;
+
+	&:hover {
+    background-color: var(--col-brand);
+    color: var(--col-text-reverse);
+  }
+}
+
+
+
+
+.post__link { font-weight: 700; }
