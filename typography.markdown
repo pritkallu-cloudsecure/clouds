@@ -4,7 +4,7 @@ layout: default
 
 {% include navigation.html %}
 
-<main class="library__patterns">
+<main class="library__patterns site__main">
     
 	{% for type in site.typography %}
 			
