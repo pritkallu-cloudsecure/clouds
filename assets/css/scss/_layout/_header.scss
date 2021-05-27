@@ -7,3 +7,48 @@
     justify-content: space-between;
     padding: var(--base) 0;
 }
+
+
+.site__navigation li {
+    @include font-size(16);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+ }
+    
+.site__navigation li a { color: var(--col-brand); }
+.site__navigation li a:hover { color: var(--col-text); }
+
+
+
+@media screen and ( max-width: 54.99em ) {
+    
+    .site__header > * {
+        margin-bottom: 1em;
+    }
+
+    .site__navigation li {
+        display: block;
+        border-bottom: 1px solid var(--col-border);
+        padding: 0.3em  0;
+     }
+}
+
+    
+@media screen and ( min-width: 55em ) {
+    
+    .site__header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .site__navigation {
+        align-self: center;
+    }
+    
+    .site__navigation li {
+        display: inline-block;
+        margin-bottom: 0;
+        padding: 0 1em;
+    }
+}

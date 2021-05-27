@@ -1,0 +1,72 @@
+
+/* Site navigation
+ * ------------------------------------------------------------- */
+
+@media screen and ( max-width: 54.99em ) {
+
+    .menu__open,
+	.menu__close {
+		color: var(--col-text);
+		@include font-size(24);
+	}
+    
+	.menu__open:before {
+		content: '\2630';
+		position: relative;
+		vertical-align: middle;
+	}
+
+	.menu__close:before {
+		content: '\2715';
+		font-weight: 700;
+		vertical-align: middle;
+	}
+
+
+	/* Hide the toggle button when the menu is open */
+	.menu__open:target { opacity: 0; }
+
+	.menu__close {
+		@include transition(all, 0.3s, linear);
+
+		/* The menu hide animation */
+		&:target {
+    	  	display: block;
+    	  	height: 0;
+    	  	opacity: 0;
+		}
+	}
+
+	.site__navigation {
+		display: block;
+		height: 0;
+		opacity: 0;
+
+		position: fixed;
+		top: auto;
+		z-index: 100;
+
+		&:target {
+			height: auto;
+			opacity: 1;
+			z-index: 100;
+
+			width: 85%;
+			margin-top: calc(var(--base) * 2);
+			padding: var(--base);
+			background-color: var(--col-page-light);
+            @include transition(all, 0.7s, ease);
+		}
+	}
+}
+
+
+
+@media screen and ( min-width: 55em ) {
+
+	.menu__open,
+	.menu__close { 
+        display: none; 
+        height: 0 !important; 
+    }	
+}
