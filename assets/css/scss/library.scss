@@ -101,7 +101,7 @@ body {
 
 .library__pattern header > * { max-width: none; }
 
-.library__pattern header h2:after {
+.library__pattern > header h2:after {
   display: block;
   content: '';
   border-bottom: 3px solid #333;

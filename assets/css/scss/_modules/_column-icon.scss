@@ -2,9 +2,14 @@
 /* Column with an icon
  * ------------------------------------------------------------- */
 
+.column__icon header {
+    display: flex;
+}
 
 .column__icon .svg__icon {
     filter: invert(82%) sepia(33%) saturate(7474%) hue-rotate(167deg) brightness(92%) contrast(96%);
+    align-self: center;
+    margin-right: 1em;
 }
 
 .column__icon .text__title {
