@@ -1,0 +1,22 @@
+/**
+ * ------------------------------------------------------------- 
+ * Logos
+ * ------------------------------------------------------------- */
+
+
+.block--logos figure {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-auto-rows: minmax(100px, auto);
+    grid-column-gap: calc(var(--base) / 2);
+}
+
+.block--logos figure img {
+    align-self: center;
+}
+
+@media screen and ( min-width: 45em ) {
+    .block--logos figure {
+        grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+    }
+}
