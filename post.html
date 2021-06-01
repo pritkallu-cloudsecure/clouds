@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
     
-    <title>Services | Azure Cloud Architects | Cloud Secure</title>
+    <title>Post | Azure Cloud Architects | Cloud Secure</title>
     <meta name="description" content="We design, build and support secure automated Azure cloud solutions for Government customers.">
     
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -42,7 +42,7 @@
         <a class="menu__close" href="#z"><span class="screen-reader-text">Close menu</span></a>
     	<ul class="nav__menu">
             <li><a href="about.html">About</a></li>
-            <li><a class="current" href="services.html">Services</a></li>
+            <li><a href="services.html">Services</a></li>
             <li><a href="automation.html">Automation</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
@@ -53,31 +53,41 @@
 
 
 <main id="main" class="site__main" role="main">
-
-    <div class="block block--single light">
-        <section class="column__text">
-            <h2 class="text__title">Blog</h2>
-            <div class="text__standout">
-                <p>Insights into the way we work.</p>
-            </div>
-        </section>
-    </div><!-- .block--single -->
-
-    <div class="block block--blog block--double">
-        <article class="blog__excerpt">
-            <time>Month 99, YEAR</time>
-            <h2 class="post__title"><a href="#" rel="bookmark">Blog post title</a></h2>        
-            <p>First paragraph of the blog post. Etiam dictum, dui ut viverra ullamcorper, ipsum dolor ultrices libero, vitae venenatis dolor risus id metus.</p>
-            <p><a class="post__link" href="post.html" rel="bookmark">Read more</a></p>
-        </article>
-        <article class="blog__excerpt">
-            <time>Month 99, YEAR</time>
-            <h2 class="post__title"><a href="#" rel="bookmark">Blog post title</a></h2>
-            <p>First paragraph of the blog post. Proin convallis vel nibh id pulvinar. Aliquam et sodales diam, non pellentesque turpis.</p>
-            <p><a class="post__link" href="post.html" rel="bookmark">Read more</a></p>
-        </article>
-    </div><!-- .block--blog -->
-
+    
+<div class="block block--blog">
+    <article class="blog__post">
+        <time>Month 99, YEAR</time>
+        <h1 class="post__title">Blog post title</h1>
+        <p>Proin convallis vel nibh id pulvinar. Aliquam et sodales diam, non pellentesque turpis. Suspendisse potenti. Suspendisse est nibh, congue sed porta eget, pulvinar ut tortor. Ut pulvinar purus eget justo eleifend, sed tincidunt ipsum ultricies.</p>
+        <p>Etiam dictum, dui ut viverra ullamcorper, ipsum dolor ultrices libero, vitae venenatis dolor risus id metus...</p>
+        <footer class="post__share">
+            <h4>Share this</h4>
+            <ul>
+            	<li>
+            		<a href="https://twitter.com/intent/tweet?url=[__PAGE_URL__]&amp;text=[__PAGE_TITLE__]" rel="external">
+            		   	<span class="screen-reader-text">Twitter</span>
+            			<svg class="svg__icon"><use xlink:href="#twitter" /></svg>
+            		</a>
+            	</li>
+                <li>
+                    <a href="https://www.linkedin.com/shareArticle?url=[__PAGE_URL__]&title=[__PAGE_TITLE__]">
+            		   	<span class="screen-reader-text">LinkedIn</span>
+            			<svg class="svg__icon"><use xlink:href="#linkedin" /></svg>
+            		</a>
+            	</li>
+            	<li>
+            		<a href="mailto:?subject=[__PAGE_TITLE__]&amp;body=[__PAGE_URL__][__PAGE_EXCERPT__]">
+            		   	<span class="screen-reader-text">Email</span>
+            			<svg class="svg__icon"><use xlink:href="#email" /></svg>
+            		</a>
+            	</li>    
+            </ul>
+        </footer><!-- .post__share -->    
+        
+    </article>
+    
+</div><!-- .block--blog -->
+    
 </main>
 
 
