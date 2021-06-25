@@ -25,9 +25,17 @@
     z-index: 100;
 }
 
-.block--hero h1 {
+.hero__text h1 {
     @include font-size(24);
     width: 100%;
+    margin: 0 auto;
+    z-index: 100;
+    text-align: center;
+    padding-bottom: 0.5em;
+}
+
+.hero__text *:not(h1) {
+    width: 75%;
     margin: 0 auto;
     z-index: 100;
     text-align: center;
