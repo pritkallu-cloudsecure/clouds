@@ -56,9 +56,9 @@
 
     <div class="block block--single light">
         <section class="column__text">
-            <h2 class="text__title">What we do</h2>
+            <h2 class="text__title">Azure Virtual Desktop Ecosystem</h2>
             <div class="text__standout">
-                <p>We can design and deliver the full Windows Virtual Desktop Ecosystem</p>
+                <p>We architect, automate and deploy the entire Azure Virtual Desktop ecosystem securely and rapidly using CloudSecure's tried and tested design pattern</p>
             </div>
         </section>
         
@@ -67,36 +67,23 @@
         </figure>
     </div><!-- .block--single -->
 
-
     <div class="block block--single">
-        <section class="column__bullets">
-            <h2 class="text__title">What we have deployed WVD for</h2>
-            <ul>
-                <li><p>Secure Remote Working with data exfiltration controls.</p></li>
-                <li><p>Remote App to provide a layer of separation from End User Device such as a browser.</p></li>
-                <li><p>Creating Developer Environments using persistent 1:1 mapped WVDs.</p></li>
-                <li><p>GPUs also available if required.</p></li>
-            </ul>
-        </section><!-- .column__bullets -->
+        <h2 class="text__title">Service and Features</h2>
+       <p>CloudSecure's Azure Virtual Desktop design pattern leverages a broad set of tooling
+          to create an ecosystem that incorporates the services and features in Azure used to secure, monitor and manage the solution
+       </p>
     </div><!-- .block--single -->
-
 
     <div class="block block--triple">
         <section class="column__icon">
             <header>
                 <img class="svg__icon" src="assets/images/icon-security.svg" alt="">
-                <h2 class="text__title">Security</h2>
+                <h2 class="text__title">Desktop Security</h2>
             </header>
             <ul>
-                <li><p>Defender ATP</p></li>
-                <li><p>NCSC / CIS Security Clamps</p></li>
-                <li><p>Multi Factor Authentication</p></li>
-                <li><p>WVD (Reverse Proxy, Screen Capture Protection, Copy/Paste disable)</p></li>
-                <li><p>Azure AD Authentication</p></li>
-                <li><p>Azure Privileged Identity Management</p></li>
-                <li><p>Network Security Groups</p></li>
-                <li><p>Delegation of Authority Model</p></li>
-                <li><p>KeyVault</p></li>
+                <li><p>W10 GPO NCSC Security Clamps (enable AppLocker, Windows Defender Anti-virus and Exploit Guard)</p></li>
+                <li><p>Microsoft Defender Advanced Threat Protection (DATP) </p></li>
+                <li><p>Data Exfiltration Controls (Screen Capture Protection, Disable Copy/Paste and client drive redirection)</p></li>
             </ul>
         </section>
         
@@ -107,8 +94,12 @@
                 <h2 class="text__title">Identity & Access Control</h2>
             </header>
             <ul>
-                <li><p>MFA (Tokens)</p></li>
+                <li><p>Azure Active Directory Domain Services (DNS/GPO)</p></li>
+                <li><p>Multi Factor Authentication</p></li>
                 <li><p>Conditional Access</p></li>
+                <li><p>Azure AD Authentication</p></li>
+                <li><p>Azure Privileged Identity Management</p></li>
+                <li><p>Self-service Password Reset</p></li>
             </ul>
         </section>
         
@@ -120,10 +111,10 @@
             </header>
             <ul>
                 <li><p>Azure Sentinel (SIEM)</p></li>
-                <li><p>Log Analytics</p></li>
+                <li><p>Azure Log Analytics Workspace </p></li>
                 <li><p>Azure Dependency Agent</p></li>
                 <li><p>Azure Monitor</p></li>
-                <li><p>Microsoft Monitoring Agent (LAW)</p></li>
+                <li><p>Microsoft Monitoring Agent</p></li>
            </ul>
         </section>
         
@@ -137,9 +128,9 @@
                 <li><p>Windows Virtual Desktop</p></li>
                 <li><p>Standard/Premium SSD Storage</p></li>
                 <li><p>Ephemeral Disks (Cost savings, lower latency and faster)</p></li>
-                <li><p>Extensions (Dependency Agent, MMA, AntiMalware)</p></li>
+                <li><p>Install Custom Script Extensions (Dependency Agent, MMA, AntiMalware)</p></li>
             </ul>
-            <p><a class="text__link" href="page.html" rel="bookmark">Find out more &rarr;</a></p>
+        <!--     <p><a class="text__link" href="page.html" rel="bookmark">Find out more &rarr;</a></p> -->
         </section>
         
         
@@ -149,11 +140,12 @@
                 <h2 class="text__title">Resilience</h2>
             </header>
             <ul>
-                <li><p>Spread VMs across AV Zones</p></li>
+                <li><p>Bespoke Terraform solution to spread VMs across Availability Zones</p></li>
+                <li><p>Azure Backups</p></li>
             </ul>
-            <p><a class="text__link" href="page.html" rel="bookmark">Find out more &rarr;</a></p>
+        <!--   <p><a class="text__link" href="page.html" rel="bookmark">Find out more &rarr;</a></p>-->
         </section>
-        
+    
         
         <section class="column__icon">
             <header>
@@ -161,10 +153,10 @@
                 <h2 class="text__title">Networking</h2>
             </header>
             <ul>
-                <li><p>Azure VWAN Design (Full Terraform)</p></li>
-                <li><p>VPN Gateways</p></li>
+                <li><p>Azure Virtual WAN</p></li>
+                <li><p>Azure VPN Gateways</p></li>
                 <li><p>Azure ExpressRoute</p></li>
-                <li><p>Azure Firewall (Full Terraform)</p></li>
+                <li><p>Azure Firewall</p></li>
             </ul>
         </section>
         
@@ -176,10 +168,9 @@
             </header>
             <ul>
                 <li><p>Azure Image Builder</p></li>
-                <li><p>Chocolately</p></li>
+                <li><p>Chocolately for automated application deployment </p></li>
                 <li><p>Azure Shared Image Gallery </p></li>
-                <li><p>Deployed with Terraform / CICD Pipelines</p></li>
-                <li><p>Optimisation Scripts </p></li>
+                <li><p>VDI Image Optimisation</p></li>
             </ul>
         </section>
         
@@ -193,7 +184,7 @@
                 <li><p>FSLogix Profile Management</p></li>
                 <li><p>Azure Files (IAM/NTFS)</p></li>
                 <li><p>Azure Private Endpoints</p></li>
-                <li><p>Shrink Profile to keep optimised </p></li>
+                <li><p>Bespoke Automated FSLogix Shrink Profile Solution</p></li>
             </ul>
         </section>
         
@@ -218,7 +209,6 @@
             </header>
             <ul>
                 <li><p>Privileged Access Workstation</p></li>
-                <li><p>DOA Model</p></li>
                 <li><p>Azure Bastion</p></li>
                 <li><p>Azure Policy</p></li>
                 <li><p>Azure Management Groups</p></li>
@@ -232,14 +222,25 @@
                 <h2 class="text__title">Automation</h2>
             </header>
             <ul>
-                <li><p>Azure Automation Account (Update Management of Servers)</p></li>
+                <li><p>Infrastructure as Code (Terraform/ARM)</p></li>
+                <li><p>Pipeline Deployment using Concourse of Azure DevOps</p></li>
+                <li><p>Powershell</p></li>
+                <li><p>Azure Automation Runbooks</p></li>
+                <li><p>Azure Functions</p></li>
             </ul>
         </section>
         
-        
         <section class="column__icon">
-            <h2 class="text__title">Azure Functions</h2>
+            <header>
+                <img class="svg__icon" src="assets/images/icon-autoscale.svg" alt="">
+                <h2 class="text__title">Autoscaling</h2>
+            </header>
+            <ul>
+                <li><p>CI/CD Pipeline to destroy and provision VMs on schedule</p></li>
+                <li><p>Azure Automation and Azure Logic Apps to automatically autoscale session hosts VMs </p></li>
+            </ul>
         </section>
+
     </div><!-- .block--triple -->    
 
 </main>
